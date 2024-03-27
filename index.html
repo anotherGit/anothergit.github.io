@@ -8,7 +8,7 @@
 
     <style>
       body {
-        background-color: rgb(237, 237, 237);
+        background-color: black;
         margin: 0;
         font-family: "Inter UI", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
       }
@@ -17,7 +17,7 @@
 
       .header{
         position: absolute;
-        background-color: darkred;
+        background-color: black;
         padding: 20px;
         width: 100%;
       }
@@ -25,18 +25,13 @@
       .header > div{
         font-size: 1.5rem;
         font-weight: 900;
-        color: #ff1744;
+        color: rgb(127, 106, 102, 1.0);
       }
 
       .firstSection{
-        background-color: blue;
+        background-color: #11171a;
         height: 100vh;
         width: 100%;
-
-
-        font-size: 1.5rem;
-        font-weight: 900;
-        color: #ff1744;
 
         display: flex;
         justify-content: center;
@@ -48,16 +43,71 @@
       }
 
       .MARLogo{
-        background-color: darkred;
         display: inline-block;
-        height: 200px;
-        width: 300px;
+        width: 600px;
+        height: 500px;
+        background-image: url("images/MAR_title.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+      }
+
+      @media (max-width: 640px) {
+        .MARLogo{
+          width: 500px;
+          height: 400px;
+        }
+      }
+
+      @media (max-width: 540px) {
+        .MARLogo{
+          width: 400px;
+          height: 300px;
+        }
+      }
+
+      @media (max-width: 440px) {
+        .MARLogo{
+          width: 350px;
+          height: 250px;
+        }
+      }
+
+      .promoText{
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: rgb(127, 106, 102, 1.0);
+
+        padding-left: 20px;
+        padding-right: 20px;
       }
 
       .downloadLinks{
+        margin-top: 50px;
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-wrap: wrap;
+        row-gap: 20px;
+        column-gap: 40px;
+      }
+
+      .googlePlay{
+        height: 84px;
+        width: 282px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-image: url("images/get-it-on-google-play.png");
+        background-position: center;
+      }
+
+      .appStore{
+        height: 84px;
+        width: 252px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-image: url("images/download-on-the-app-store.png");
+        background-position: center;
       }
 
       .footer{
@@ -71,19 +121,57 @@
 
       .footer > div{
         text-align: center;
+        padding-top: 50px;
+        padding-bottom: 70px;
       }
 
       .discord{
-        background-color: darkred;
         display: inline-block;
+        
         height: 50px;
         width: 100px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-image: url("images/discordIcon.png");
+        background-position: center;
+
+        margin-bottom: 50px;
       }
 
       .bottomSection{
         display: flex;
         justify-content: center;
-        align-items: center;
+        align-items: top;
+        flex-wrap: wrap;
+        row-gap: 20px;
+        column-gap: 100px;
+      }
+
+      .bottomSection > div{
+        width: 300px;
+      }
+
+      .bottomSection > div > div {
+        margin-bottom: 20px;
+      }
+
+      .bottomTitle{
+        font-weight: 900;
+      }
+
+      .about{
+        color: #949494;
+      }
+
+      .bottomSection a{
+        color: #c6c6c6;
+        text-decoration: none;
+      }
+
+      .bottomSection a:hover{
+        cursor: pointer;
+        text-decoration: underline;
+        color: white;
       }
 
 
@@ -97,16 +185,11 @@
 
     <div class="firstSection">
       <div>
-        <div class="MARLogo">
-          Match And Rogue
-        </div>
+        <div class="MARLogo"></div>
+        <div class="promoText">Match-4 to survive real-time battles in pixelated, rogue-like adventures</div>
         <div class="downloadLinks">
-          <div>
-            GET IT APPLE STORE
-          </div>
-          <div>
-            GET IT PLAY STROE
-          </div>
+          <div class="googlePlay"></div>
+          <div class="appStore"></div>
         </div>
       </div>
     </div>
@@ -114,17 +197,21 @@
     <div class="footer">
       <div>
         <div class="discord">
-          DISCORD
+          
         </div>
         <div class="bottomSection">
           <div>
-            <div>ABOUT ANOTHER JAY</div>
-            <div>I'm a solo game developer located in Toulouse, France</div>
+            <div class="bottomTitle">ABOUT ANOTHER JAY</div>
+            <div class="about">I'm a solo game developer located in Toulouse, France</div>
           </div>
           <div>
-            <div>LEGAL</div>
-            <div>Privacy</div>
-            <div>Terms</div>
+            <div class="bottomTitle">CONTACT</div>
+            <div><a href="mailto:anotherjaydev@gmail.com">anotherjaydev@gmail.com</a></div>
+          </div>
+          <div>
+            <div class="bottomTitle">LEGAL</div>
+            <div><a href="privacyPolicy/MatchAndRogue.html">Privacy</a></div>
+            <div><a href="terms.html">Terms</a></div>
           </div>
         </div>
       </div>
