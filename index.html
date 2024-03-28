@@ -100,6 +100,7 @@
       }
 
       .googlePlay{
+        position: relative;
         height: 84px;
         width: 282px;
         background-repeat: no-repeat;
@@ -109,6 +110,7 @@
       }
 
       .appStore{
+        position: relative;
         height: 84px;
         width: 252px;
         background-repeat: no-repeat;
@@ -133,6 +135,7 @@
       }
 
       .discord{
+        position: relative;
         display: inline-block;
         
         height: 50px;
@@ -181,6 +184,14 @@
         color: white;
       }
 
+      .link {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1;
+      }
 
     </style>
   </head>
@@ -195,21 +206,22 @@
         <div class="MARLogo"></div>
         <div class="promoText">Match-4 to survive real-time battles in pixelated, rogue-like adventures</div>
         <div class="downloadLinks">
-          <a target="_blank" rel="noopener noreferrer" href="https://discord.gg/CQ58n84DqT">
-            <div class="googlePlay"></div>
-          </a>
-          <a target="_blank" rel="noopener noreferrer" href="https://discord.gg/CQ58n84DqT">
-            <div class="appStore"></div>
-          </a>
+          <div class="googlePlay">
+            <a target="_blank" rel="noopener noreferrer" href="https://discord.gg/CQ58n84DqT"><span class="link"></span></a>
+          </div>
+          <div class="appStore">
+            <a target="_blank" rel="noopener noreferrer" href="https://discord.gg/CQ58n84DqT"><span class="link"></span></a>
+          </div>
         </div>
       </div>
     </div>
 
     <div class="footer">
       <div>
-        <a target="_blank" rel="noopener noreferrer" href="https://discord.gg/CQ58n84DqT">
-          <div class="discord"></div>
-        </a>
+        
+        <div class="discord">
+          <a target="_blank" rel="noopener noreferrer" href="https://discord.gg/CQ58n84DqT"><span class="link"></span></a>
+        </div>
         <div class="bottomSection">
           <div>
             <div class="bottomTitle">ABOUT ANOTHER JAY</div>
