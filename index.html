@@ -191,6 +191,212 @@
         top: 0;
         left: 0;
         z-index: 1;
+      }      
+
+      .secondSection{
+        background-color: hsl(342 7% 11% / 1);
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        padding-top: 50px;
+        padding-bottom: 50px;
+      }
+
+      .iframeWrapper {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        max-width: 800px;
+        margin: auto;
+      }
+
+      .iframeWrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
+
+      .carouselContainer {
+        position: relative;
+        margin-top: 50px;
+        max-width: 1300px;
+        width: 100%;
+        overflow: hidden;
+        margin-bottom: 40px;
+      }
+
+      .imageCaroussel {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .carouselContainer::before, .carouselContainer::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 50px;
+        pointer-events: none;
+        z-index: 10;
+      }
+
+      .carouselContainer::before {
+        left: 0;
+        background: linear-gradient(to right, rgba(0,0,0,0.7), transparent);
+        display: none;
+      }
+
+      .carouselContainer::after {
+        right: 0;
+        background: linear-gradient(to left, rgba(0,0,0,0.7), transparent);
+        display: none;
+      }
+
+      .carouselContainer.scrollable-left::before {
+        display: block;
+      }
+
+      .carouselContainer.scrollable-right::after {
+        display: block;
+      }
+
+      .carouselArrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: #ddd;
+        color: #444;
+        border: none;
+        cursor: pointer;
+        user-select: none;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 15px;
+        z-index: 20;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        display: none;
+      }
+
+      .leftArrow {
+        left: 10px;
+        padding-right: 8px;
+      }
+
+      .rightArrow {
+        right: 10px;
+        padding-left: 8px;
+      }
+
+      .rightArrow.scrollable, .leftArrow.scrollable {
+        display: block;
+      }
+
+      .gameImg {
+        flex: 0 0 auto;
+        height: 600px;
+        width: 277px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        margin-left: 10px;
+        margin-right: 10px;
+        border-radius: 10px;
+      }
+
+      @media (max-width: 900px) {
+        .gameImg {
+          height: 450px;
+          width: 209px;
+        }
+      }
+
+      @media (max-width: 540px) {
+        .gameImg {
+          height: 300px;
+          width: 139px;
+        }
+      }
+
+      .img1 {
+        background-image: url("images/screenshots/MAR_storeIMG_match4Tiles_iPhone.png");
+      }
+
+      .img2 {
+        background-image: url("images/screenshots/MAR_storeIMG_realTime_iPhone.png");
+      }
+
+      .img3 {
+        background-image: url("images/screenshots/MAR_storeIMG_variousRooms_iPhone.png");
+      }
+
+      .img4 {
+        background-image: url("images/screenshots/MAR_storeIMG_variousWorld_iPhone.png");
+      }
+
+      .img5 {
+        background-image: url("images/screenshots/MAR_storeIMG_bosses_iPhone.png");
+      }
+
+      .img6 {
+        background-image: url("images/screenshots/MAR_storeIMG_customizePowers_iPhone.png");
+      }
+
+      .img7 {
+        background-image: url("images/screenshots/MAR_storeIMG_plentyItems_iPhone.png");
+      }
+
+      .gameDescription {
+        color: rgb(168 150 147);
+        padding-top: 40px;
+        padding-bottom: 30px;
+        padding-left: 20px;
+        padding-right: 20px;
+        max-width: 1000px;
+        margin: auto;
+        text-align: left;
+        border: 1px solid;
+        background-color: #191717;
+        border-color: rgb(54 50 49);
+      }
+
+      .gameDescription h2 {
+        margin-top: 20px;
+        color: #E0E0E0;
+        text-align: center;
+        display: block;
+        margin-bottom: 35px;
+        margin-top: 35px;
+      }
+
+      .gameDescription p {
+        line-height: 1.5;
+        margin-bottom: 15px;
+      }
+
+      .gameDescription intro {
+        text-align: center;
+        display: inline-block;
+        font-size: 1.4rem;
+        color: rgb(235 230 229);
+        margin-bottom: 20px;
+      }
+
+      .gameDescription li{
+        margin-bottom: 7px;
       }
 
     </style>
@@ -212,6 +418,61 @@
           <div class="appStore">
             <a target="_blank" rel="noopener noreferrer" href="https://www.apple.com/fr/app-store/"><span class="link"></span></a>
           </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="secondSection">
+      <div class="iframeWrapper">
+        <iframe src="https://www.youtube.com/embed/jHFNnzIoGms" allowfullscreen></iframe>
+      </div>
+      <div class="carouselContainer">
+        <button class="carouselArrow leftArrow">◄</button>
+        <div class="imageCaroussel">
+          <div class="gameImg img1"></div>
+          <div class="gameImg img2"></div>
+          <div class="gameImg img3"></div>
+          <div class="gameImg img4"></div>
+          <div class="gameImg img5"></div>
+          <div class="gameImg img6"></div>
+          <div class="gameImg img7"></div>
+        </div>
+        <button class="carouselArrow rightArrow">►</button>
+      </div>
+      <div class="gameDescription">
+        <intro>Dive into the depths of dynamic dungeons and enchanted environments in "Match And Rogue" a unique blend of rogue-like adventure and real-time match-4 mechanics, all showcased in captivating pixel art design accompanied by 8-bit music and sound effects.</intro>
+
+        <h2>INNOVATIVE GAMEPLAY</h2>
+        <p>"Match And Rogue" introduces a fresh take on the rogue-like genre with an innovative match-4 combat system. Players navigate through diverse dungeons each hosting procedurally generated rooms. Among these, combat rooms are where the real action unfolds, with enemies attacking in real time. Your arsenal? A 6x6 grid filled with various powers, from sword hits to freezing waves. Align four identical powers to unleash your attack, continuously strategizing to survive the onslaught.</p>
+
+        <h2>VARIOUS ACTIVITIES</h2>
+        <p>Your journey is peppered with oases of calm amidst the chaos. Restore your hero's life at a fireplace, fish for resources, mine for metal shards, or trade and shop for crucial items and passive gear that influence your stats.</p>
+
+        <h2>CHARACTER PROGRESSION</h2>
+        <p>At the heart of each level lies a village, a sanctuary where you can upgrade your hero's abilities using resources gathered on your adventure. Death is not the end but a chance to grow; earn XP for each enemy vanquished, invest in a skill tree, and return stronger, ready to venture deeper into the adventure.</p>
+
+        <h2>PLAY WITH ONE HAND</h2>
+        <p>Designed with the mobile player in mind, "Match And Rogue" uses portrait orientation, making it easy to play anytime, anywhere.</p>
+
+        <h2>FEATURES</h2>
+        <ul>
+          <li>Unique blend of match-4, real-time combat and rogue-like gameplay</li>
+          <li>Procedurally generated levels ensure a new experience every time</li>
+          <li>Rich non-combat activities to enhance your journey</li>
+          <li>Deep character progression with a variety of powers and items</li>
+          <li>RPG mechanics, meet the NPCs who will help you on your quest</li>
+          <li>Nostalgic pixel art aesthetics with captivating 8-bit music</li>
+        </ul>
+
+        <br>
+        <p>Join the adventure in "Match And Rogue" and forge your path through this ever-changing, pixelated world. Whether strategizing through combat, enhancing your hero's abilities, or exploring the nuanced world, there's always something new around the corner. Download now and start your quest through this rogue-like puzzle adventure!</p>
+      </div>
+      <div class="downloadLinks">
+        <div class="googlePlay">
+          <a target="_blank" rel="noopener noreferrer" href="https://play.google.com/store/games"><span class="link"></span></a>
+        </div>
+        <div class="appStore">
+          <a target="_blank" rel="noopener noreferrer" href="https://www.apple.com/fr/app-store/"><span class="link"></span></a>
         </div>
       </div>
     </div>
@@ -241,7 +502,44 @@
     </div>
 
     <script type="module">
-      
+      document.addEventListener('DOMContentLoaded', function() {
+        const caroussel = document.querySelector('.imageCaroussel');
+        const container = document.querySelector('.carouselContainer');
+        const leftArrow = document.querySelector('.leftArrow');
+        const rightArrow = document.querySelector('.rightArrow');
+
+        const scrollAmount = document.querySelector('.gameImg').clientWidth;
+
+        leftArrow.addEventListener('click', () => {
+          caroussel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+        });
+
+        rightArrow.addEventListener('click', () => {
+          caroussel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+        });
+
+        const checkScroll = () => {
+          const maxScrollLeft = caroussel.scrollWidth - caroussel.clientWidth;
+          if (caroussel.scrollLeft > 0) {
+            container.classList.add('scrollable-left');
+            leftArrow.classList.add('scrollable');
+          } else {
+            container.classList.remove('scrollable-left');
+            leftArrow.classList.remove('scrollable');
+          }
+          if (caroussel.scrollLeft < maxScrollLeft) {
+            container.classList.add('scrollable-right');
+            rightArrow.classList.add('scrollable');
+          } else {
+            container.classList.remove('scrollable-right');
+            rightArrow.classList.remove('scrollable');
+          }
+        };
+
+        checkScroll();
+        
+        caroussel.addEventListener('scroll', checkScroll);
+      });
     </script>
 
   </body>
