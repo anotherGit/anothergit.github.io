@@ -17,11 +17,20 @@
       }
       div { margin: 0; padding: 0; }
 
+      .firstSection{
+        background-color: #11171a;
+        height: 100vh;
+        width: 100%;
+
+        display: flex;
+        align-items: center;
+
+        flex-direction: column;
+      }
 
       .header{
-        position: absolute;
         background-color: black;
-        padding: 20px;
+        padding: 15px;
         box-sizing: border-box;
         width: 100%;
       }
@@ -32,65 +41,43 @@
         color: rgb(127, 106, 102, 1.0);
       }
 
-      .firstSection{
-        background-color: #11171a;
-        height: 100vh;
-        width: 100%;
-
+      .landingPage {
+        flex-shrink: 2;
         display: flex;
-        justify-content: center;
         align-items: center;
-      }
-
-      .firstSection > div {
-        text-align: center;
-      }
-
-      .MARLogo{
-        display: inline-block;
-        width: 600px;
-        height: 500px;
-        background-image: url("images/MAR_title.png");
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center;
-      }
-
-      @media (max-width: 640px) {
-        .MARLogo{
-          width: 500px;
-          height: 400px;
-          margin-bottom: 30px;
-        }
-      }
-
-      @media (max-width: 540px) {
-        .MARLogo{
-          width: 400px;
-          height: 300px;
-          margin-bottom: 30px;
-        }
-      }
-
-      @media (max-width: 440px) {
-        .MARLogo{
-          width: 350px;
-          height: 250px;
-          margin-bottom: 30px;
-        }
-      }
-
-      .promoText{
-        font-size: 1.5rem;
-        font-weight: 700;
-        color: rgb(127, 106, 102, 1.0);
+        justify-content: center;
+        flex-direction: column;
+        height: calc(100% - 60px - 58px);
+        padding-top: 30px;
+        padding-bottom: 30px;
 
         padding-left: 20px;
         padding-right: 20px;
       }
 
+      .MARLogo{
+        flex-shrink: 3;
+        display: inline-block;
+        max-height: 405px;
+        height: auto;
+        max-width: 600px;
+        width: 100%;
+        aspect-ratio: 716 / 484;
+        background-image: url("images/MAR_title.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        margin-bottom: 40px;
+      }
+
+      .promoText{
+        font-size: 1.5rem;
+        color: rgb(155 141 139);
+        text-align: center;
+        margin-bottom: 40px;
+      }
+
       .downloadLinks{
-        margin-top: 50px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -101,8 +88,8 @@
 
       .googlePlay{
         position: relative;
-        height: 84px;
-        width: 282px;
+        height: 70px;
+        aspect-ratio: 282 / 84;
         background-repeat: no-repeat;
         background-size: contain;
         background-image: url("images/get-it-on-google-play.png");
@@ -111,87 +98,13 @@
 
       .appStore{
         position: relative;
-        height: 84px;
-        width: 252px;
+        height: 70px;
+        aspect-ratio: 252 / 84;
         background-repeat: no-repeat;
         background-size: contain;
         background-image: url("images/download-on-the-app-store.png");
         background-position: center;
-      }
-
-      .footer{
-        background-color: black;
-        color: white;
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      .footer > div{
-        text-align: center;
-        padding-top: 50px;
-        padding-bottom: 70px;
-      }
-
-      .discord{
-        position: relative;
-        display: inline-block;
-        
-        height: 50px;
-        width: 100px;
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-image: url("images/discordIcon.png");
-        background-position: center;
-
-        margin-bottom: 50px;
-      }
-
-      .bottomSection{
-        display: flex;
-        justify-content: center;
-        align-items: top;
-        flex-wrap: wrap;
-        row-gap: 20px;
-        column-gap: 100px;
-      }
-
-      .bottomSection > div{
-        width: 300px;
-      }
-
-      .bottomSection > div > div {
-        margin-bottom: 20px;
-      }
-
-      .bottomTitle{
-        font-weight: 900;
-      }
-
-      .about{
-        color: #949494;
-      }
-
-      .bottomSection a{
-        color: #c6c6c6;
-        text-decoration: none;
-      }
-
-      .bottomSection a:hover{
-        cursor: pointer;
-        text-decoration: underline;
-        color: white;
-      }
-
-      .link {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        z-index: 1;
-      }      
+      }     
 
       .secondSection{
         background-color: hsl(342 7% 11% / 1);
@@ -227,7 +140,7 @@
         position: relative;
         margin-top: 50px;
         max-width: 1300px;
-        width: 100%;
+        width: 90%;
         overflow: hidden;
         margin-bottom: 40px;
       }
@@ -238,6 +151,7 @@
         align-items: center;
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
+        height: 600px;
       }
 
       .carouselContainer::before, .carouselContainer::after {
@@ -307,27 +221,26 @@
 
       .gameImg {
         flex: 0 0 auto;
-        height: 600px;
-        width: 277px;
+        height: 100%;
+        aspect-ratio: 277 / 600;
         background-repeat: no-repeat;
         background-size: contain;
         background-position: center;
         margin-left: 10px;
         margin-right: 10px;
         border-radius: 10px;
+        cursor: pointer;
       }
 
-      @media (max-width: 900px) {
-        .gameImg {
+      @media (max-width: 900px), (max-height: 700px) {
+        .imageCaroussel {
           height: 450px;
-          width: 209px;
         }
       }
 
-      @media (max-width: 540px) {
-        .gameImg {
+      @media (max-width: 540px), (max-height: 500px) {
+        .imageCaroussel {
           height: 300px;
-          width: 139px;
         }
       }
 
@@ -371,6 +284,9 @@
         border: 1px solid;
         background-color: #191717;
         border-color: rgb(54 50 49);
+        font-size: 0.875rem;
+        line-height: 1.57;
+        margin-bottom: 50px;
       }
 
       .gameDescription h2 {
@@ -383,32 +299,145 @@
       }
 
       .gameDescription p {
-        line-height: 1.5;
         margin-bottom: 15px;
       }
 
       .gameDescription intro {
         text-align: center;
         display: inline-block;
-        font-size: 1.4rem;
+        font-size: 1.2rem;
         color: rgb(235 230 229);
         margin-bottom: 20px;
       }
 
-      .gameDescription li{
-        margin-bottom: 7px;
+      .footer{
+        background-color: black;
+        color: white;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        font-size: 0.875rem;
+      }
+
+      .footer > div{
+        text-align: center;
+        padding-top: 50px;
+        padding-bottom: 70px;
+      }
+
+      .discord{
+        position: relative;
+        display: inline-block;
+        
+        height: 50px;
+        width: 100px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-image: url("images/discordIcon.png");
+        background-position: center;
+
+        margin-bottom: 50px;
+      }
+
+      .bottomSection{
+        display: flex;
+        justify-content: center;
+        align-items: top;
+        flex-wrap: wrap;
+        row-gap: 20px;
+        column-gap: 100px;
+      }
+
+      .bottomSection > div{
+        width: 300px;
+      }
+
+      .bottomSection > div > div {
+        margin-bottom: 20px;
+      }
+
+      .bottomTitle{
+        font-weight: 900;
+      }
+
+      .about{
+        color: #949494;
+      }
+
+      .bottomSection a{
+        color: #c6c6c6;
+        text-decoration: none;
+      }
+
+      .bottomSection a:hover{
+        cursor: pointer;
+        text-decoration: underline;
+        color: white;
+      }
+
+      .link {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1;
+      }
+
+      .imgViewer{
+        position: absolute;
+        top: 0;
+        height: 100vh;
+        width: 100vw;
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+
+      .imageOverlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        z-index: 1000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .carouselContainer.FS {
+        width: 100%;
+        height: 95%;
+      }
+
+      .imageCaroussel.FS {
+        height: 100%;
+      }
+
+      .closeOverlay {
+        background: none;
+        border: none;
+        color: white;
+        font-size: 40px;
+        cursor: pointer;
+        position:absolute;
+        top:13px;
+        right:20px;
+      }
+
+      .imageCaroussel.FS:focus {
+          outline: none;
       }
 
     </style>
   </head>
 
   <body>
-    <div class="header">
-      <div>ANOTHER JAY</div>
-    </div>
-
     <div class="firstSection">
-      <div>
+      <div class="header"><div>ANOTHER JAY</div></div>
+      <div class="landingPage">
         <div class="MARLogo"></div>
         <div class="promoText">Match-4 to survive real-time battles in pixelated, rogue-like adventures</div>
         <div class="downloadLinks">
@@ -429,13 +458,13 @@
       <div class="carouselContainer">
         <button class="carouselArrow leftArrow">◄</button>
         <div class="imageCaroussel">
-          <div class="gameImg img1"></div>
-          <div class="gameImg img2"></div>
-          <div class="gameImg img3"></div>
-          <div class="gameImg img4"></div>
-          <div class="gameImg img5"></div>
-          <div class="gameImg img6"></div>
-          <div class="gameImg img7"></div>
+          <div class="gameImg img1" data-index="0" ></div>
+          <div class="gameImg img2" data-index="1" ></div>
+          <div class="gameImg img3" data-index="2" ></div>
+          <div class="gameImg img4" data-index="3" ></div>
+          <div class="gameImg img5" data-index="4" ></div>
+          <div class="gameImg img6" data-index="5" ></div>
+          <div class="gameImg img7" data-index="6" ></div>
         </div>
         <button class="carouselArrow rightArrow">►</button>
       </div>
@@ -501,14 +530,33 @@
       </div>
     </div>
 
+    <div class="imageOverlay" style="display:none;">
+      <div class="carouselContainer FS">
+        <button class="carouselArrow leftArrow">◄</button>
+        <div class="imageCaroussel FS">
+          <div class="gameImg img1"></div>
+          <div class="gameImg img2"></div>
+          <div class="gameImg img3"></div>
+          <div class="gameImg img4"></div>
+          <div class="gameImg img5"></div>
+          <div class="gameImg img6"></div>
+          <div class="gameImg img7"></div>
+        </div>
+        <button class="carouselArrow rightArrow">►</button>
+      </div>
+      <button class="closeOverlay">&times;</button>
+    </div>
+
     <script type="module">
       document.addEventListener('DOMContentLoaded', function() {
         const caroussel = document.querySelector('.imageCaroussel');
+        const carousselFS = document.querySelector('.imageCaroussel.FS');
         const container = document.querySelector('.carouselContainer');
+        const containerFS = document.querySelector('.carouselContainer.FS');
         const leftArrow = document.querySelector('.leftArrow');
         const rightArrow = document.querySelector('.rightArrow');
 
-        const scrollAmount = document.querySelector('.gameImg').clientWidth;
+        const scrollAmount = document.querySelector('.gameImg').clientWidth + 20;
 
         leftArrow.addEventListener('click', () => {
           caroussel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
@@ -539,6 +587,93 @@
         checkScroll();
         
         caroussel.addEventListener('scroll', checkScroll);
+
+        const imageOverlay = document.querySelector('.imageOverlay');
+        const closeOverlay = document.querySelector('.closeOverlay');
+
+        function openOverlay(startIndex) {
+          imageOverlay.style.display = 'flex';
+          document.body.style.overflow = 'hidden';
+
+          carousselFS.setAttribute('tabindex', '0');
+          carousselFS.focus();
+
+          const imageWidth = carousselFS.querySelector('.gameImg').offsetWidth + 20;
+          const imageOffset = imageWidth * startIndex;
+          const halfImageWidth = imageWidth / 2;
+          const scrollTo = imageOffset - (containerFS.clientWidth / 2) + halfImageWidth;
+
+          carousselFS.scrollLeft = scrollTo;
+
+          scrollAmountFS = imageWidth;
+        }
+
+        function closeOverlayFunc() {
+          imageOverlay.style.display = 'none';
+          document.body.style.overflow = 'auto';
+        }
+
+        document.querySelectorAll('.gameImg').forEach(img => {
+          img.addEventListener('click', function(e) {
+            e.stopPropagation();
+            if (imageOverlay.style.display === 'flex') return;
+
+            openOverlay(this.getAttribute('data-index'));
+          });
+        });
+
+        closeOverlay.addEventListener('click', (e) => {
+          e.stopPropagation();
+          closeOverlayFunc();
+        });
+
+        document.addEventListener('keydown', function(event) {
+          if (event.key === "Escape" || event.key === "Esc") {
+            if (imageOverlay.style.display === 'flex') {
+              closeOverlayFunc();
+            }
+          }
+        });
+
+        carousselFS.addEventListener('keydown', function(event) {
+          if (event.key === "ArrowRight") {
+            event.preventDefault();
+            carousselFS.scrollBy({ left: scrollAmountFS, behavior: 'smooth' });
+          } else if (event.key === "ArrowLeft") {
+            event.preventDefault();
+            carousselFS.scrollBy({ left: -scrollAmountFS, behavior: 'smooth' });
+          }
+        });
+
+        const leftArrowFS = document.querySelector('.imageOverlay .leftArrow');
+        const rightArrowFS = document.querySelector('.imageOverlay .rightArrow');
+
+        let scrollAmountFS = document.querySelector('.imageOverlay .gameImg').clientWidth;
+
+        leftArrowFS.addEventListener('click', (e) => {
+          carousselFS.scrollBy({ left: -scrollAmountFS, behavior: 'smooth' });
+          carousselFS.setAttribute('tabindex', '0');
+          carousselFS.focus();
+        });
+
+        rightArrowFS.addEventListener('click', (e) => {
+          carousselFS.scrollBy({ left: scrollAmountFS, behavior: 'smooth' });
+          carousselFS.setAttribute('tabindex', '0');
+          carousselFS.focus();
+        });
+
+        const checkScrollFS = () => {
+          const maxScrollLeft = carousselFS.scrollWidth - carousselFS.clientWidth;
+          if (carousselFS.scrollLeft > 0) leftArrowFS.classList.add('scrollable');
+          else leftArrowFS.classList.remove('scrollable');
+
+          if (carousselFS.scrollLeft < maxScrollLeft) rightArrowFS.classList.add('scrollable');
+          else rightArrowFS.classList.remove('scrollable');
+        };
+
+        checkScrollFS();
+        
+        carousselFS.addEventListener('scroll', checkScrollFS);
       });
     </script>
 
